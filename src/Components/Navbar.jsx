@@ -9,7 +9,7 @@ function Navbar(props) {
   return (
     <div className="flex bg-customColor text-black justify-around p-5">
       <div>
-        <Link to="/">
+        <Link to="/home">
           <div className="text-4xl  font-sans">B.planet</div>
         </Link>
       </div>
@@ -24,7 +24,7 @@ function Navbar(props) {
             <div>Login</div>
           </Link>
         }
-        { isLoggedIn &&
+        { !isLoggedIn &&
           <Link to="/profile">
             <div>Profile</div>
           </Link>

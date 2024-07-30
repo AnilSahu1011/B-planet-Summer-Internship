@@ -14,7 +14,6 @@ function App() {
     <div>
       <div className="font-sans antialiased text-black">
         <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup/>} />
