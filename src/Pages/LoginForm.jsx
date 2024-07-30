@@ -1,8 +1,12 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { IoMdEye, IoMdEyeOff } from 'react-icons/io';
+import toast from 'react-hot-toast';
 
-function LoginForm() {
+function LoginForm({setIsLoggedIn}) {
+
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -17,9 +21,16 @@ function LoginForm() {
     }));
   }
 
+  function submitHandler(event){
+    event.preventDefault();
+    setIsLoggedIn(true);
+    toast.success("Logged In");
+    navigate("/profile");
+  }
+
   return (
     <div className="w-full max-w-sm mx-auto">
-      <form className="w-full space-y-4 relative">
+      <form className="w-full space-y-4 relative" onSubmit={submitHandler}>
         <label className="block">
           <p className="mb-2 font-semibold">
             Email Address<sup className="text-red-500">*</sup>
@@ -63,11 +74,11 @@ function LoginForm() {
         </label>
         
         <button
-          type="submit"
-          className="flex justify-center items-center bg-customColor text-black p-1 pl-5 pr-5 mx-auto rounded-2xl hover:customColorDark transition duration-200"
+          className="flex justify-center items-center bg-customColor text-black p-1 pl-5 pr-5 mx-auto rounded-2xl "
         >
           Log In
         </button>
+
         <div className="text-center mt-4">
           <p>
             Don't have an account yet?{" "}

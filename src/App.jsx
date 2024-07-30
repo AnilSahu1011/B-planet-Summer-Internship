@@ -7,6 +7,7 @@ import Profile from "./Pages/Profile";
 import { useState } from "react";
 import Template from "./Pages/Template";
 import Product from "./Pages/Product"
+import Login from "./Pages/Login";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -15,9 +16,9 @@ function App() {
       <div className="font-sans antialiased text-black">
         <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="" element={<Home />} />
           <Route path="/signup" element={<Signup/>} />
-          <Route path="/login" element={<Template />} />
+          <Route path="/login" element={<Template setIsLoggedIn={setIsLoggedIn}/>} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/product" element={<Product/>} />

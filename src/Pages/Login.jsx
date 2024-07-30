@@ -7,9 +7,9 @@ function Login({setIsLoggedIn}) {
     <Template
         // title="Login"
         // desc="Welcome Back" 
-        // formtype="login"
         // image={imageSrc}
-        // setIsLoggedIn={setIsLoggedIn}
+        formtype="login"
+        setIsLoggedIn={setIsLoggedIn}
     />
   )
 }

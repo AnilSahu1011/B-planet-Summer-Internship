@@ -3,7 +3,7 @@ import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
 import imageSrc from "../assets/LoginImage.png";
 
-const Template = () => {
+const Template = ({setIsLoggedIn}) => {
   return (
     <div className="flex items-center justify-center h-[89.2vh] bg-customColorbg">
       <div className="w-1/2 border-4 border-zinc-500 bg-customColorbg flex absolute top-1/4">
@@ -15,7 +15,7 @@ const Template = () => {
           <p className="mb-6">
             <span className="text-gray-600">Welcome Back!</span>
           </p>
-          <LoginForm />
+          <LoginForm setIsLoggedIn={setIsLoggedIn}/>
           {/* {formtype === "login" ? <LoginForm /> : <SignupForm />} */}
         </div>
       </div>
