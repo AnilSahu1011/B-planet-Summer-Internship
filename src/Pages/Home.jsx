@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className="h-screen">
       <div className="flex mt-10 h-75vh justify-evenly">
-        <div className="text-5xl mt-16">
+        <div className="text-5xl ml-28 mt-32">
           'As interesting <br />
           as a plant
         </div>

@@ -6,8 +6,8 @@ import Signup from "./Pages/SignupForm";
 import Profile from "./Pages/Profile";
 import { useState } from "react";
 import Template from "./Pages/Template";
-import Product from "./Pages/Product"
-import Login from "./Pages/Login";
+import GridBox from "./Pages/GridBox";
+
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -15,13 +15,13 @@ function App() {
     <div>
       <div className="font-sans antialiased text-black">
         <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-        <Routes>
-          <Route path="" element={<Home />} />
+        <Routes basename='./'>
+          <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup/>} />
           <Route path="/login" element={<Template setIsLoggedIn={setIsLoggedIn}/>} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/contactus" element={<Contactus />} />
-          <Route path="/product" element={<Product/>} />
+          <Route path="/contactus" element={<Contactus isLoggedIn={isLoggedIn}/>} />
+          <Route path="/gridbox" element={<GridBox />} />
         </Routes>
       </div>
     </div>

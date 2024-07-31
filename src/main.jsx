@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename="B-planet-Summer-Internship">
     <App />
     <Toaster/>
   </BrowserRouter>,

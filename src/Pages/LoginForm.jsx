@@ -25,7 +25,7 @@ function LoginForm({setIsLoggedIn}) {
     event.preventDefault();
     setIsLoggedIn(true);
     toast.success("Logged In");
-    navigate("/profile");
+    navigate("/");
   }
 
   return (
