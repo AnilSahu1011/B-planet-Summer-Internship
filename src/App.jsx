@@ -14,8 +14,10 @@ function App() {
   return (
     <div>
       <div className="font-sans antialiased text-black">
+      
         <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-        <Routes basename='./'>
+
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup/>} />
           <Route path="/login" element={<Template setIsLoggedIn={setIsLoggedIn}/>} />

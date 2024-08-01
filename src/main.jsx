@@ -6,8 +6,10 @@ import { BrowserRouter } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename="B-planet-Summer-Internship">
+  <React.StrictMode>
+    <BrowserRouter basename={window.location.pathname || '/B-planet-Summer-Internship/'} >
     <App />
     <Toaster/>
-  </BrowserRouter>,
+  </BrowserRouter>
+  </React.StrictMode>
 )

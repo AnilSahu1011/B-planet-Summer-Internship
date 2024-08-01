@@ -3,8 +3,6 @@ import { GrFormPrevious, GrFormNext } from "react-icons/gr";
 import Data from "../assets/Data";
 import ProductCard from "./ProductCard"; // Adjust the path as necessary
 import ContactUsButton from "./ContactUsButton";
-import { Link } from "react-router-dom";
-
 
 import image1 from "../assets/image 1.png";
 
@@ -31,15 +29,14 @@ const GridBox = () => {
       setCurrentPage(page);
     }
   };
-
   return (
     <div className="p-2">
       {!selectedProduct ? (
         <div className="flex text-4xl pb-1">Featured Product</div>
       ) : (
         <div className="relative">
-          <div className="flex justify-center" onClick={()=> 1}>
-            <Link to="/"><div className="text-center text-4xl">B.planet</div></Link>
+          <div className="flex justify-center" >
+            <div className="text-center text-4xl cursor-pointer">B.planet</div>
           </div>
           <div className="absolute top-0 right-0 p-4">
             <ContactUsButton />
