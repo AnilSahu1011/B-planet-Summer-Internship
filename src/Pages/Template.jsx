@@ -1,6 +1,5 @@
 import React from "react";
 import LoginForm from "./LoginForm";
-import SignupForm from "./SignupForm";
 import imageSrc from "../assets/LoginImage.png";
 
 const Template = ({setIsLoggedIn}) => {

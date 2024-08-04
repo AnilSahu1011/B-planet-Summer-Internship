@@ -82,7 +82,7 @@ function LoginForm({setIsLoggedIn}) {
         <div className="text-center mt-4">
           <p>
             Don't have an account yet?{" "}
-            <Link to="#" className="text-blue-500 hover:underline">
+            <Link to="/" className="text-blue-500 hover:underline">
               SignUp
             </Link>
           </p>

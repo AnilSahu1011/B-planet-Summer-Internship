@@ -1,7 +1,6 @@
 import React from "react";
-import image1 from "../assets/image 1.png"
 
-function ProductCard({title, subTitle, guide, description }) {
+function ProductCard({ title, subTitle, guide, description, image }) {
   return (
     <div className="w-full bg-customColorbg">
       <div className="flex pt-20 pl-40 pr-40 justify-between gap-10">
@@ -35,7 +34,7 @@ function ProductCard({title, subTitle, guide, description }) {
           </div>
         </div>
         <div className="w-1/2 flex justify-center items-center">
-          <img src={image1} width={350} alt="Plant" />
+          <img src={image} width={350} alt="Plant" />
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { RiEditFill } from "react-icons/ri";
 import image from "../assets/profile.jpg";
 import { useState } from "react";
+import toast from 'react-hot-toast';
 
 function Profile() {
   const [isEditing, setIsEditing] = useState(false);
@@ -14,6 +15,9 @@ function Profile() {
   const [zipCode, setZipCode] = useState(751024);
 
   const handleEditClick = () => {
+    if (isEditing) {
+      toast.success("Profile saved Successfully!");
+    }
     setIsEditing(!isEditing);
   };
 

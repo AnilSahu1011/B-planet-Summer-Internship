@@ -1,16 +1,14 @@
 import { useState } from "react";
 import toast from 'react-hot-toast';
 
-function Contactus({ isLoggedIn }) {
+function Contactus() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if (!isLoggedIn) {
-      toast.error('You need to be logged in to submit the form');
-    } else if (name === '' || email === '' || message === '') {
+    if (name === '' || email === '' || message === '') {
       toast.error('All fields are required!');
     } else {
       toast.success('Submitted successfully!');
